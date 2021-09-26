@@ -1,0 +1,27 @@
+pipeline {
+ agent any
+
+  triggers {
+     cron ( 'H/5 * * * *' )
+}
+
+     environment {
+           VERSION = '4.056'
+         }
+
+      stages {
+        stage ('BUILD') {
+             steps {
+                sh ' echo this is jenkins file '
+                     sh ' cal '
+                    echo " this is ${VERSION} software "
+              }
+           }
+        stage ('TEST') {
+           steps {
+                sh 'ls -lrt '
+            }
+          }
+     }
+    }
+
