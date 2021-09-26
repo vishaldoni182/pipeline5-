@@ -15,7 +15,7 @@ pipeline {
                 sh ' echo this is jenkins file '
                      sh ' cal '
                     echo " this is ${VERSION} software "
-                    sh ' echo $? '
+                  
               }
            }
         stage ('TEST') {
